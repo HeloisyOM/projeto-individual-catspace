@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Space</title>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="painel-esquerdo">
+        </div>
+
+        <div class="painel-direito">
+            
+            <nav class="navbar">
+                <a href="#" id="nav-home">Home</a>
+                <a href="#" id="nav-cad">Cadastro</a>
+                <a href="#"  id="nav-login" class="btn-login">Login</a>
+            </nav>
+
+            <main class="content">
+    
+    <div id="tela-home">
+        <h1 class="title">
+            Bem - Vindo ao <br>
+            <span class="cat">CAT SPACE!</span>
+        </h1>
+        
+        <p class="subtitulo">
+            Um cantinho na internet (só que local) para quem ama gatos e quer<br>
+            colecionar imagens dos felinos mais fofos do mundo!
+        </p>
+
+        <h2 class="div-titulo">Como funciona?</h2>
+        
+        <div class="div-passos">
+            <div class="passo">
+                <span class="numero-passo">1º</span>
+                <p>Crie ou logue<br>em uma conta.</p>
+                <span class="patas-gato" style="position: absolute; right: -30px; top: 50%; transform: translateY(-50%);">🐾</span>
+            </div>
+            
+            <div class="passo">
+                <span class="numero-passo">2º</span>
+                <p>Ao logar, você irá receber<br>a foto de um gatinho.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tela-login" style="display: none;">
+        <h1 class="title">
+            Olá, <span class="cat">Bem- Vindo <br> de volta!</span>
+        </h1>
+        
+        <form class="form-login">
+            <div class="input-group">
+                <label for="usuario">Usuário/E-mail:</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+            
+            <div class="input-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+            </div>
+            
+            <p class="link-cadastro">Não tem uma conta? <a href="#">Cadastre-se!</a></p>
+            
+            <button type="button" class="btn-entrar">Entrar</button>
+        </form>
+    </div>
+
+    <div id="tela-cadastro" style="display: none;">
+        <h1 class="title">Cadastro</h1>
+        
+        <p class="subtitulo" style="margin-bottom: 30px;">
+            Preencha com <span style="color: #9c7cf6; font-weight: 700;">carinho</span> as informações para encontrar os felinos <span style="color: #9c7cf6; font-weight: 700;">mais fofos</span> do <span style="color: #9c7cf6; font-weight: 700;">mundo</span>!
+        </p>
+        <form class="form-cadastro">
+            <!-- PASSO 1 -->
+            <div id="passo-1">
+                <div class="input-group">
+                    <label for="cad-nome">Nome do Usuário:</label>
+                    <input type="text" id="cad-nome" name="nome">
+                </div>
+                
+                <div class="input-group">
+                    <label for="cad-email">Email:</label>
+                    <input type="email" id="cad-email" name="email">
+                </div>
+
+                <div class="input-group">
+                    <label for="cad-data">Data de nascimento:</label>
+                    <input type="date" id="cad-data" name="data">
+                </div>
+                
+                <button type="button" class="btn-entrar" id="btn-proximo" style="width: 100%;">Próximo ➔</button>
+            </div>
+
+            <!-- PASSO 2 (Escondido inicialmente) -->
+            <div id="passo-2" style="display: none;">
+                <div class="input-group">
+                    <label for="cad-qtd">Quantos gatos você tem?</label>
+                    <input type="number" id="cad-qtd" name="qtd" min="0">
+                </div>
+                
+                <div class="input-group">
+                    <label>Personalidade de gato favorita:</label>
+                    <div class="opcoes-grupo">
+                        <label><input type="radio" name="personalidade" value="preguicoso"> Preguiçoso</label>
+                        <label><input type="radio" name="personalidade" value="raivoso"> Raivoso</label>
+                        <label><input type="radio" name="personalidade" value="amoroso"> Amoroso</label>
+                        <label><input type="radio" name="personalidade" value="brincalhao"> Brincalhão</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Cor do pelo dos gatos:</label>
+                    <div class="opcoes-grupo">
+                        <label><input type="checkbox" name="cor" value="preto"> Preto</label>
+                        <label><input type="checkbox" name="cor" value="branco"> Branco</label>
+                        <label><input type="checkbox" name="cor" value="laranja"> Laranja</label>
+                        <label><input type="checkbox" name="cor" value="frajola"> Frajola</label>
+                        <label><input type="checkbox" name="cor" value="tricolor"> Tricolor</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="cad-raca">Raça de gato favorita:</label>
+                    <select id="cad-raca" name="raca" class="input-select">
+                        <option value="" disabled selected>Selecione uma raça</option>
+                        <option value="srd">SRD (Vira-lata)</option>
+                        <option value="siames">Siamês</option>
+                        <option value="persa">Persa</option>
+                        <option value="maine-coon">Maine Coon</option>
+                        <option value="sphynx">Sphynx</option>
+                    </select>
+                </div>
+                
+                <div class="botoes-nav">
+                    <button type="button" class="btn-secundario" id="btn-voltar">⬅ Voltar</button>
+                    <button type="button" class="btn-entrar" style="flex: 1; margin-top: 0;">Cadastrar</button>
+                </div>
+            </div>
+        </form> 
+    </div>
+
+</main>
+
+            <div class="decoracao-lateral">
+                <div class="linha"></div>
+                <span class="patas-gato">🐾</span>
+                <div class="linha"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+let telaHome, telaLogin, telaCadastro;
+
+window.onload = function irEvir() {
+    telaHome = document.getElementById('tela-home');
+    telaLogin = document.getElementById('tela-login');
+    telaCadastro = document.getElementById('tela-cadastro');
+
+    const btnHome = document.getElementById('nav-home');
+    const btnLogin = document.getElementById('nav-login');
+    const btnCad = document.getElementById('nav-cad');
+
+    const passo1 = document.getElementById('passo-1');
+    const passo2 = document.getElementById('passo-2');
+    const btnProximo = document.getElementById('btn-proximo');
+    const btnVoltar = document.getElementById('btn-voltar');
+
+    btnProximo.addEventListener('click', function(e) {
+        e.preventDefault();
+        passo1.style.display = 'none';
+        passo2.style.display = 'block';
+    });
+
+    btnVoltar.addEventListener('click', function(e) {
+        e.preventDefault();
+        passo2.style.display = 'none';
+        passo1.style.display = 'block';
+    });
+
+    btnHome.addEventListener('click', function(e) {
+        e.preventDefault();
+        esconderTelas();
+        telaHome.style.display = 'block';
+    });
+
+    
+    btnCad.addEventListener('click', function(e) {
+        e.preventDefault();
+        esconderTelas();
+        passo2.style.display = 'none'; // Reseta caso estivesse no passo 2
+        passo1.style.display = 'block'; // Garante que começa do inicio
+        telaCadastro.style.display = 'block';
+    });
+
+    btnLogin.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        esconderTelas();
+        telaLogin.style.display = 'block';
+    });
+   
+};
+
+function esconderTelas() {
+    telaHome.style.display = 'none';
+    telaLogin.style.display = 'none';
+    telaCadastro.style.display = 'none';
+}
+</script>
