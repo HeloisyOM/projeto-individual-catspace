@@ -200,8 +200,8 @@ window.onload = function irEvir() {
     btnCad.addEventListener('click', function(e) {
         e.preventDefault();
         esconderTelas();
-        passo2.style.display = 'none'; // Reseta caso estivesse no passo 2
-        passo1.style.display = 'block'; // Garante que começa do inicio
+        passo2.style.display = 'none'; 
+        passo1.style.display = 'block'; 
         telaCadastro.style.display = 'block';
     });
 
@@ -213,6 +213,27 @@ window.onload = function irEvir() {
    
 };
 
+function cadastrarUsuario() {
+    const nome = document.getElementById('cad-nome').value;
+    const email = document.getElementById('cad-email').value;
+    const dataNascimento = document.getElementById('cad-data').value;
+    const qtdGatos = document.getElementById('cad-qtd').value;
+    const personalidade = document.querySelector('input[name="personalidade"]:checked')?.value;
+    const coresSelecionadas = Array.from(document.querySelectorAll('input[name="cor"]:checked')).map(input => input.value);
+    const racaFavorita = document.getElementById('cad-raca').value;
+
+    const usuario = {
+        nome,
+        email,
+        dataNascimento,
+        qtdGatos,
+        personalidade,
+        coresSelecionadas,
+        racaFavorita
+    };
+
+    console.log(usuario);
+}
 function esconderTelas() {
     telaHome.style.display = 'none';
     telaLogin.style.display = 'none';

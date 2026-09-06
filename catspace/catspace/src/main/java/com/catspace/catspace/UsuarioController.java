@@ -24,11 +24,11 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<Usuario> cadastrar(@RequestBody Usuario user ){
-        String sqlUsuario = "INSERT INTO usuario(nome,email,dataNascimento,qtdGatosTem) VALUES(?,?,?,?)";
+        String sqlUsuario = "INSERT INTO usuario(nome,email,dataNascimento,qtdGatosTem,senha) VALUES(?,?,?,?,?)";
 
         LocalDate dataAtual = LocalDate.now();
 
-        if(user.getNome() == null || user.getEmail().isEmpty() || !user.getEmail().contains("@") || user.getDataNascimento().equals(dataAtual) || user.getDataNascimento().isAfter(dataAtual) || user.getQtdGatosTem()<0){
+        if(user.getNome() == null || user.getEmail().isEmpty() || !user.getEmail().contains("@") || user.getDataNascimento().equals(dataAtual) || user.getDataNascimento().isAfter(dataAtual) || user.getQtdGatosTem()<0 || user.getSenha().length()<8){
             return ResponseEntity.status(400).build();
         }
 
@@ -40,6 +40,8 @@ public class UsuarioController {
             ps.setString(2,user.getEmail());
             ps.setObject(3,user.getDataNascimento());
             ps.setInt(4,user.getQtdGatosTem());
+            ps.setString(5,user.getSenha());
+
 
             return ps;
         },keyHolder);

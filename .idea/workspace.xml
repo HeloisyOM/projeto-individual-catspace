@@ -5,41 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61689c1-b4c0-4dbc-8ebc-2e4f460f0292" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/projeto-individual-catspace.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/ColecaoUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/ColecaoUsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/GatoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Raca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/RacaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gaot6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/main/java/com/catspace/projeto_individual_catspace/ProjetoIndividualCatspaceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/test/java/com/catspace/projeto_individual_catspace/ProjetoIndividualCatspaceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/html/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/fundo-gatinhos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/html/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

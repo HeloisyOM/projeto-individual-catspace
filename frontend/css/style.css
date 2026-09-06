@@ -28,7 +28,7 @@ body {
 
 .painel-esquerdo {
     flex: 1;
-    background-image: url('C:/Users/heloi/Documents/individual-sem2/projeto-individual-catspace/app/src/fundo-gatinhos.jpg'); 
+    background-image: url('../src/fundo-gatinhos.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

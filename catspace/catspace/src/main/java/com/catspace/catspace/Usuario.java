@@ -10,20 +10,30 @@ public class Usuario {
         private String email;
         private LocalDate dataNascimento;
         private Integer qtdGatosTem;
+        private String senha;
         private Integer fkRacaFavorita;
         private List<Integer> coresFavoritas;
 
         public Usuario() {
         }
 
-    public Usuario(Integer id, String nome, String email, LocalDate dataNascimento, Integer qtdGatosTem, Integer fkRacaFavorita, List<Integer> coresFavoritas) {
+    public Usuario(Integer id, String nome, String email, String senha, LocalDate dataNascimento, Integer qtdGatosTem, Integer fkRacaFavorita, List<Integer> coresFavoritas) {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        this.senha = senha;
         this.dataNascimento = dataNascimento;
         this.qtdGatosTem = qtdGatosTem;
         this.fkRacaFavorita = fkRacaFavorita;
         this.coresFavoritas = coresFavoritas;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public Integer getId() {

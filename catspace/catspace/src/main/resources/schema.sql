@@ -8,7 +8,8 @@ CREATE TABLE usuario (
      nome VARCHAR(100) NOT NULL,
      email VARCHAR(100) NOT NULL UNIQUE,
      dataNascimento DATE NOT NULL,
-     qtdGatosTem INT NOT NULL
+     qtdGatosTem INT NOT NULL,
+     senha VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE corGato (
@@ -95,5 +96,5 @@ INSERT INTO corGato (nome) VALUES
    ('Preto');
 
 
-INSERT INTO usuario(nome,email,dataNascimento,qtdGatosTem) VALUES
-         ('TESTE1','EMAIL','2000-12-20',20)
+INSERT INTO usuario(nome,email,dataNascimento,qtdGatosTem,senha) VALUES
+         ('TESTE1','EMAIL','2000-12-20',20,'1325t6erfdv')
