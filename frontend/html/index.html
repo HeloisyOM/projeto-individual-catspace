@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+ <div class="container">
         <div class="painel-esquerdo">
         </div>
 
@@ -79,51 +79,49 @@
             Preencha com <span style="color: #9c7cf6; font-weight: 700;">carinho</span> as informações para encontrar os felinos <span style="color: #9c7cf6; font-weight: 700;">mais fofos</span> do <span style="color: #9c7cf6; font-weight: 700;">mundo</span>!
         </p>
         <form class="form-cadastro">
-            <!-- PASSO 1 -->
             <div id="passo-1">
                 <div class="input-group">
-                    <label for="cad-nome">Nome do Usuário:</label>
-                    <input type="text" id="cad-nome" name="nome">
+                    <label for="cadNome">Nome do Usuário:</label>
+                    <input type="text" id="cadNome" name="nome">
                 </div>
                 
                 <div class="input-group">
-                    <label for="cad-email">Email:</label>
-                    <input type="email" id="cad-email" name="email">
+                    <label for="cadEmail">Email:</label>
+                    <input type="email" id="cadEmail" name="email">
                 </div>
 
                 <div class="input-group">
-                    <label for="cad-data">Data de nascimento:</label>
-                    <input type="date" id="cad-data" name="data">
+                    <label for="cadData">Data de nascimento:</label>
+                    <input type="date" id="cadData" name="data">
                 </div>
                 
                 <button type="button" class="btn-entrar" id="btn-proximo" style="width: 100%;">Próximo ➔</button>
             </div>
 
-            <!-- PASSO 2 (Escondido inicialmente) -->
             <div id="passo-2" style="display: none;">
                 <div class="input-group">
-                    <label for="cad-qtd">Quantos gatos você tem?</label>
-                    <input type="number" id="cad-qtd" name="qtd" min="0">
+                    <label for="cadQtd">Quantos gatos você tem?</label>
+                    <input type="number" id="cadQtd" name="qtd" min="0">
                 </div>
                 
                 <div class="input-group">
                     <label>Personalidade de gato favorita:</label>
                     <div class="opcoes-grupo">
-                        <label><input type="radio" name="personalidade" value="preguicoso"> Preguiçoso</label>
-                        <label><input type="radio" name="personalidade" value="raivoso"> Raivoso</label>
-                        <label><input type="radio" name="personalidade" value="amoroso"> Amoroso</label>
-                        <label><input type="radio" name="personalidade" value="brincalhao"> Brincalhão</label>
+                        <label><input type="radio" name="personalidade" value="1"> Preguiçoso</label>
+                        <label><input type="radio" name="personalidade" value="2"> Bravo</label>
+                        <label><input type="radio" name="personalidade" value="3"> Amoroso</label>
+                        <label><input type="radio" name="personalidade" value="4"> Brincalhão</label>
                     </div>
                 </div>
 
                 <div class="input-group">
                     <label>Cor do pelo dos gatos:</label>
                     <div class="opcoes-grupo">
-                        <label><input type="checkbox" name="cor" value="preto"> Preto</label>
-                        <label><input type="checkbox" name="cor" value="branco"> Branco</label>
-                        <label><input type="checkbox" name="cor" value="laranja"> Laranja</label>
-                        <label><input type="checkbox" name="cor" value="frajola"> Frajola</label>
-                        <label><input type="checkbox" name="cor" value="tricolor"> Tricolor</label>
+                        <label><input type="checkbox" name="cor" value="1"> Preto</label>
+                        <label><input type="checkbox" name="cor" value="2"> Branco</label>
+                        <label><input type="checkbox" name="cor" value="3"> Laranja</label>
+                        <label><input type="checkbox" name="cor" value="4"> Frajola</label>
+                        <label><input type="checkbox" name="cor" value="5"> Tricolor</label>
                     </div>
                 </div>
 
@@ -131,11 +129,7 @@
                     <label for="cad-raca">Raça de gato favorita:</label>
                     <select id="cad-raca" name="raca" class="input-select">
                         <option value="" disabled selected>Selecione uma raça</option>
-                        <option value="srd">SRD (Vira-lata)</option>
-                        <option value="siames">Siamês</option>
-                        <option value="persa">Persa</option>
-                        <option value="maine-coon">Maine Coon</option>
-                        <option value="sphynx">Sphynx</option>
+                    
                     </select>
                 </div>
                 
@@ -213,26 +207,37 @@ window.onload = function irEvir() {
    
 };
 
-function cadastrarUsuario() {
-    const nome = document.getElementById('cad-nome').value;
-    const email = document.getElementById('cad-email').value;
-    const dataNascimento = document.getElementById('cad-data').value;
-    const qtdGatos = document.getElementById('cad-qtd').value;
-    const personalidade = document.querySelector('input[name="personalidade"]:checked')?.value;
-    const coresSelecionadas = Array.from(document.querySelectorAll('input[name="cor"]:checked')).map(input => input.value);
-    const racaFavorita = document.getElementById('cad-raca').value;
 
-    const usuario = {
-        nome,
-        email,
-        dataNascimento,
-        qtdGatos,
-        personalidade,
-        coresSelecionadas,
-        racaFavorita
-    };
+function listarRacas() {
+    fetch('http://localhost:8080/racas')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Serviço indisponível no momento");
+            } else {
+                return response.json();
+            }
+        })
+        .then(racas => {
+            const selectRaca = document.getElementById('cad-raca');
+            
+            for (var i = 0; i < racas.length; i++) {
+                const raca = racas[i];
 
-    console.log(usuario);
+                selectRaca.innerHTML += `<option value="${raca.id}">${raca.nome}</option>`;
+            }
+        })
+        .catch(erro => {
+            console.error("Erro ao carregar raças:", erro);
+        });
+}
+
+listarRacas();
+
+
+function cadastrarUsuario(){
+    const iptNome = document.getElementById('nav-home');
+    const btnLogin = document.getElementById('nav-login');
+    const btnCad = document.getElementById('nav-cad');
 }
 function esconderTelas() {
     telaHome.style.display = 'none';

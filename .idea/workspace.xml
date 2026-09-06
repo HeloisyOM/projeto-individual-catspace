@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61689c1-b4c0-4dbc-8ebc-2e4f460f0292" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Personalidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/PersonalidadeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catspace/catspace/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/html/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
