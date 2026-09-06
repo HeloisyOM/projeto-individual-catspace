@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c61689c1-b4c0-4dbc-8ebc-2e4f460f0292" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/projeto-individual-catspace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/ColecaoUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/ColecaoUsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/GatoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Raca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/RacaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/java/com/catspace/catspace/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gaot6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catspace/catspace/src/main/resources/static/gato9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/main/java/com/catspace/projeto_individual_catspace/ProjetoIndividualCatspaceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/backend/projeto-individual-catspace/projeto-individual-catspace/src/test/java/com/catspace/projeto_individual_catspace/ProjetoIndividualCatspaceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/html/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/componentes/frontend/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/fundo-gatinhos.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3IvioYTf33BC2teiLEgnlUr6nNl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.CatspaceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\heloi\Documents\individual-sem2\projeto-individual-catspace\catspace\catspace\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CatspaceApplication">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/projeto-individual-catspace/frontend/html/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="CatspaceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="catspace" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.catspace.catspace.CatspaceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c61689c1-b4c0-4dbc-8ebc-2e4f460f0292" name="Changes" comment="" />
+      <created>1788651620122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788651620122</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
