@@ -17,6 +17,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
+    
 }
 
 .container {
@@ -117,13 +119,13 @@ body {
 
 .div-passos {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 .passo {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 30px;
     font-size: 0.95rem;
     line-height: 1.4;
     position: relative;
@@ -140,6 +142,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;
+    margin-left: 10px;
     filter: grayscale(1) brightness(2);
 }
 .decoracao-lateral {
@@ -194,115 +197,103 @@ body {
 }
 
 .input-group input {
-    background-color: #d1b8fa;
+    background-color: #DBC3FF;
     border-radius: 8px;
     padding: 15px;
+    height: 45px;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     color: #0b0512;
     outline: none;
+    margin-bottom: 10px;
 }
-
-.input-group input:focus {
-    box-shadow: 0 0 8px #9c7cf6; /* Efeito de brilho ao clicar no input */
-}
-
-.link-cadastro {
-    font-family: "Inika", serif;
-    font-size: 0.9rem;
-    color: #ffffff;
-    margin-top: -5px;
-}
-
-.link-cadastro a {
-    color: #9c7cf6;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.link-cadastro a:hover {
-    text-decoration: underline;
-}
-
-.btn-entrar {
-    background-color: #ae8bfa;
-    color: #ffffff;
-    font-family: "Inika", serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.btn-entrar:hover {
-    background-color: #9c7cf6; 
-}
-
-.form-cadastro {
+.senhas {
     display: flex;
-    flex-direction: column;
     gap: 15px;
-    width: 100%;
-    max-width: 500px;
-    max-height: 60vh;  
-    overflow-y: auto;
-    padding-right: 15px;
-}
-
-.form-cadastro::-webkit-scrollbar {
-    width: 6px;
-}
-.form-cadastro::-webkit-scrollbar-thumb {
-    background: #9c7cf6;
-    border-radius: 10px;
+    width: 100% !important;
 }
 
 .input-row {
     display: flex;
     gap: 15px;
+    width: 100%;
 }
 
 .input-row .input-group {
-    flex: 1; 
+    flex: 1;
 }
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 70vh;  
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.input-group input, 
 .input-group select.input-select {
-    background-color: #d1b8fa;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
+    background-color: #1a102f; 
+    border: 1px solid rgba(156, 124, 246, 0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    height: 48px;
     font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    color: #0b0512;
+    font-size: 0.95rem;
+    color: #ffffff;
     outline: none;
-    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select.input-select:focus {
+    border-color: #9c7cf6;
+    box-shadow: 0 0 10px rgba(156, 124, 246, 0.4);
+    background-color: #22143d;
 }
 
 .opcoes-grupo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .opcoes-grupo label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    background-color: #DBC3FF;
+    border: 1px solid rgba(156, 124, 246, 0.2);
+    padding: 10px 12px;
+    border-radius: 8px;
     font-family: "Inter", sans-serif !important;
-    font-size: 0.9rem !important;
-    font-weight: 400 !important;
-    color: #d1d1d1 !important;
+    font-size: 0.85rem !important;
+    color: #150c26 !important;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.opcoes-grupo label:hover {
+    border-color: #9c7cf6;
+    background-color: #251644;
+    color: #ffffff !important;
+}
+
+.opcoes-grupo input[type="radio"]:checked + span,
+.opcoes-grupo input[type="checkbox"]:checked {
+    accent-color: #9c7cf6;
 }
 
 .opcoes-grupo input[type="radio"],
 .opcoes-grupo input[type="checkbox"] {
-    accent-color: #9c7cf6; 
-    width: 16px;
-    height: 16px;
+    accent-color: #9c7cf6;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
 }
 
@@ -326,7 +317,26 @@ body {
     transition: all 0.3s;
 }
 
+.btn-entrar {
+    background-color: #ae8bfa;
+    color: #ffffff;
+    font-family: "Inika", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-entrar:hover {
+    background-color: #9c7cf6; 
+}
 .btn-secundario:hover {
     background-color: #9c7cf6;
     color: #0b0512;
 }
+
+

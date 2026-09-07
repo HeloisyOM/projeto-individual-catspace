@@ -1,5 +1,6 @@
 package com.catspace.catspace;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
+
 @CrossOrigin
 @RestController
 @RequestMapping("/usuarios")
@@ -20,6 +21,34 @@ public class UsuarioController {
 
     public UsuarioController(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<Usuario> pegarUsuario(@PathVariable Integer idUsuario){
+        String sql = "SELECT * FROM usuario WHERE id=?";
+
+        try{
+            Usuario user =jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Usuario.class), idUsuario);
+            user.setId(idUsuario);
+
+            return ResponseEntity.status(200).body(user);
+        }catch (EmptyResultDataAccessException e){
+            return ResponseEntity.status(404).build();
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Usuario>> listarUsuario(){
+        String sql = "SELECT * FROM usuario";
+
+        List<Usuario> usuarios = jdbcTemplate.query(sql,
+                new BeanPropertyRowMapper<>(Usuario.class));
+
+        if(usuarios.isEmpty()){
+            return ResponseEntity.status(200).build();
+        }
+
+        return ResponseEntity.status(200).body(usuarios);
     }
 
     @PostMapping

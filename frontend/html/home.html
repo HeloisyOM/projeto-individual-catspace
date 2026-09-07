@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Space - Coleção</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="painel-principal">
+        
+        <aside class="barra-lateral">
+            <div class="perfil-usuario">
+                <div class="foto-perfil"></div>
+                <span class="nome-usuario" id="nome">Nome</span>
+                <span class="icone-patinha"><img src="../src/paw-print.png" alt=""></span>
+            </div>
+
+            <nav class="menu-lateral">
+                <a href="#" class="menu-item ativo">
+                    <span class="icone-gato"><img src="../src/cat.png" alt=""></span> Coleção
+                </a>
+            </nav>
+
+
+
+            <div class="sair-container">
+                <br/>
+                <button class="botao-sair" onclick="sair()">Sair</button>
+            </div>
+        </aside>
+
+        <main class="conteudo-principal">
+            
+            <header class="cabecalho-topo">
+                <button class="botao-colecionar" onclick="cadastrarColecao()">Colecionar Gato!</button>
+            </header>
+
+            <section class="container-galeria">
+                <div class="grade-gatos" id="galeria">
+                    <!-- Os gatinhos serão injetados dinamicamente -->
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+<script>
+    
+let listaGatos;
+let nomeUser = sessionStorage.nomeUser
+
+window.onload = async function inicializarPagina() {
+
+    nome.innerHTML= nomeUser;
+        await listarColecao();
+        
+        await carregarFotosGatinhos();
+
+        aleatorizarGato();
+    };
+
+
+async function carregarFotosGatinhos(){
+       try{
+        const resposta = await fetch("http://localhost:8080/gatos"); 
+        
+        if (resposta.ok) {
+             listaGatos = await resposta.json();
+            const galeriaDosGatinhos = document.getElementById("galeria");
+                galeriaDosGatinhos.innerHTML = "";
+
+            listaGatos.forEach(gato => {
+                const cardGato = document.createElement("div");
+                cardGato.className = "card-gato";
+                
+                const img = document.createElement("img");
+                const h3 = document.createElement("h3");
+
+                img.alt = gato.nome;
+                img.id = `gato-${gato.id}`;
+                img.src= gato.urlFoto;
+
+                if (listaIdsGatos.includes(gato.id)) {
+                        img.className = "desbloqueado"; 
+                    }else{
+                        img.className = "gato-img"; 
+
+                    }
+
+                h3.innerText = gato.nome
+                h3.className = "nome-gato"; 
+
+                cardGato.appendChild(img);
+                cardGato.appendChild(h3);
+
+                galeriaDosGatinhos.appendChild(cardGato);
+
+            });
+       }
+
+
+    }catch (erro) {
+        console.error("Erro ao carregar a galeria de gatos:", erro);
+    }
+    }
+
+
+    let idGatoSorteado;
+    function aleatorizarGato(){
+        fetch("http://localhost:8080/gatos/aleatorizar")
+        .then(response =>{
+            if (!response.ok) throw new Error("Serviço indisponível no momento");
+            return response.json()
+        }).then(gato =>{
+            idGatoSorteado = gato;
+            console.log(idGatoSorteado);
+        })
+    }
+aleatorizarGato()
+
+listaId = [];
+let idUser = sessionStorage.idUser
+
+console.log("esse" + idUser);
+
+function cadastrarColecao(){
+    if (!idGatoSorteado) {
+            alert("Nenhum gato sorteado ainda!");
+            return;
+    }
+
+    const colecao = {
+    "fkUsuario": Number(idUser),
+    "fkGato": Number(idGatoSorteado)
+    }
+
+    fetch('http://localhost:8080/colecoes', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(colecao)
+    }) 
+    .then(response => {
+        if (response.status === 201) {
+            console.log("Gato novo adquirido salvo com sucesso!");
+            alert("Você ganhou um gatinho novo!!! Olhe a sua coleção <3")
+            window.location.reload();        
+        } else if(response.status === 409){
+            alert("Você já tem esse gatinho, tente novamente!")
+            window.location.reload();        
+
+        }
+        else {
+            console.log("Erro no fetch do cad colecao!");
+            throw new Error("Falha ao cadastrar o gatinho na colecao. Status: " + response.status);        
+        }
+})
+}
+
+
+let listaIdsGatos = [];
+
+async function listarColecao(){
+    try{
+    const response = await fetch(`http://localhost:8080/colecoes/${idUser}`)
+           
+        if (!response.ok){
+            throw new Error("Serviço indisponível no momento");
+            return response.json();
+        }
+
+        const colecoes = await response.json();
+        listaIdsGatos = []
+        
+       colecoes.forEach(colecao => {
+         listaIdsGatos.push(colecao.fkGato);
+        })    
+        console.log(colecoes)
+
+}
+catch(erro){
+ console.error("Erro ao carregar colecao:", erro);
+}
+}
+
+
+function sair(){
+    sessionStorage.clear(); 
+        window.location.href = "index.html";
+}
+</script>

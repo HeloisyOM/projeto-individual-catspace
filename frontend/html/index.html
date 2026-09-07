@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Space</title>
-    <script src="../js/script.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -40,9 +39,8 @@
             <div class="passo">
                 <span class="numero-passo">1º</span>
                 <p>Crie ou logue<br>em uma conta.</p>
-                <span class="patas-gato" style="position: absolute; right: -30px; top: 50%; transform: translateY(-50%);">🐾</span>
             </div>
-            
+                <img width="20" height="20" src="../src/paw-print.png" alt="">
             <div class="passo">
                 <span class="numero-passo">2º</span>
                 <p>Ao logar, você irá receber<br>a foto de um gatinho.</p>
@@ -57,8 +55,8 @@
         
         <form class="form-login">
             <div class="input-group">
-                <label for="usuario">Usuário/E-mail:</label>
-                <input type="text" id="usuario" name="usuario">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
             </div>
             
             <div class="input-group">
@@ -68,7 +66,7 @@
             
             <p class="link-cadastro">Não tem uma conta? <a href="#">Cadastre-se!</a></p>
             
-            <button type="button" class="btn-entrar">Entrar</button>
+            <button type="button" class="btn-entrar" onclick="logar()">Entrar</button>
         </form>
     </div>
 
@@ -78,74 +76,75 @@
         <p class="subtitulo" style="margin-bottom: 30px;">
             Preencha com <span style="color: #9c7cf6; font-weight: 700;">carinho</span> as informações para encontrar os felinos <span style="color: #9c7cf6; font-weight: 700;">mais fofos</span> do <span style="color: #9c7cf6; font-weight: 700;">mundo</span>!
         </p>
-        <form class="form-cadastro">
-            <div id="passo-1">
-                <div class="input-group">
-                    <label for="cadNome">Nome do Usuário:</label>
-                    <input type="text" id="cadNome" name="nome">
-                </div>
-                
-                <div class="input-group">
-                    <label for="cadEmail">Email:</label>
-                    <input type="email" id="cadEmail" name="email">
-                </div>
+<form class="form-cadastro">
+    <div id="passo-1">
+        <div class="input-group">
+            <label for="cadNome">Nome do Usuário:</label>
+            <input type="text" id="cadNome" name="nome" placeholder="Digite seu nome">
+        </div>
+        
+        <div class="input-group">
+            <label for="cadEmail">Email:</label>
+            <input type="email" id="cadEmail" name="email" placeholder="seu@email.com">
+        </div>
 
-                <div class="input-group">
-                    <label for="cadData">Data de nascimento:</label>
-                    <input type="date" id="cadData" name="data">
-                </div>
-                
-                <button type="button" class="btn-entrar" id="btn-proximo" style="width: 100%;">Próximo ➔</button>
+        <div class="input-group">
+            <label for="cadData">Data de nascimento:</label>
+            <input type="date" id="cadData" name="data">
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="cadSenha">Senha:</label>
+                <input type="password" id="cadSenha" name="senha" placeholder="Mínimo 8 caracteres">
             </div>
-
-            <div id="passo-2" style="display: none;">
-                <div class="input-group">
-                    <label for="cadQtd">Quantos gatos você tem?</label>
-                    <input type="number" id="cadQtd" name="qtd" min="0">
-                </div>
-                
-                <div class="input-group">
-                    <label>Personalidade de gato favorita:</label>
-                    <div class="opcoes-grupo">
-                        <label><input type="radio" name="personalidade" value="1"> Preguiçoso</label>
-                        <label><input type="radio" name="personalidade" value="2"> Bravo</label>
-                        <label><input type="radio" name="personalidade" value="3"> Amoroso</label>
-                        <label><input type="radio" name="personalidade" value="4"> Brincalhão</label>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label>Cor do pelo dos gatos:</label>
-                    <div class="opcoes-grupo">
-                        <label><input type="checkbox" name="cor" value="1"> Preto</label>
-                        <label><input type="checkbox" name="cor" value="2"> Branco</label>
-                        <label><input type="checkbox" name="cor" value="3"> Laranja</label>
-                        <label><input type="checkbox" name="cor" value="4"> Frajola</label>
-                        <label><input type="checkbox" name="cor" value="5"> Tricolor</label>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="cad-raca">Raça de gato favorita:</label>
-                    <select id="cad-raca" name="raca" class="input-select">
-                        <option value="" disabled selected>Selecione uma raça</option>
-                    
-                    </select>
-                </div>
-                
-                <div class="botoes-nav">
-                    <button type="button" class="btn-secundario" id="btn-voltar">⬅ Voltar</button>
-                    <button type="button" class="btn-entrar" style="flex: 1; margin-top: 0;">Cadastrar</button>
-                </div>
+            <div class="input-group">
+                <label for="cadConfSenha">Confirmação senha:</label>
+                <input type="password" id="cadConfSenha" name="confSenha" placeholder="Repita a senha">
             </div>
-        </form> 
+        </div>
+        
+        <button type="button" class="btn-entrar" id="btn-proximo" style="width: 100%;">Próximo ➔</button>
+    </div>
+
+    <div id="passo-2" style="display: none;">
+        <div class="input-group">
+            <label for="cadQtd">Quantos gatos você tem?</label>
+            <input type="number" id="cadQtd" name="qtd" min="0" placeholder="Ex: 2">
+        </div>
+        
+        <div class="input-group">
+            <label>Personalidade de gato favorita:</label>
+            <div class="opcoes-grupo" id="opPersona">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Cor do pelo dos gatos:</label>
+            <div class="opcoes-grupo" id="opCor">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="cad-raca">Raça de gato favorita:</label>
+            <select id="cad-raca" name="raca" class="input-select">
+                <option value="" disabled selected>Selecione uma raça</option>                    
+            </select>
+        </div>
+        
+        <div class="botoes-nav">
+            <button type="button" class="btn-secundario" id="btn-voltar">⬅ Voltar</button>
+            <button type="button" class="btn-entrar" style="flex: 1; margin-top: 0;" onclick="cadastrarUsuario()">Cadastrar</button>
+        </div>
+    </div>
+</form> 
     </div>
 
 </main>
 
             <div class="decoracao-lateral">
                 <div class="linha"></div>
-                <span class="patas-gato">🐾</span>
+                <span class="patas-gato"><img src="../src/paw-print.png" alt=""></span>
                 <div class="linha"></div>
             </div>
         </div>
@@ -155,7 +154,6 @@
 
 
 <script>
-
 let telaHome, telaLogin, telaCadastro;
 
 window.onload = function irEvir() {
@@ -174,6 +172,21 @@ window.onload = function irEvir() {
 
     btnProximo.addEventListener('click', function(e) {
         e.preventDefault();
+        const nome = document.getElementById('cadNome').value.trim();
+        const email = document.getElementById('cadEmail').value.trim();
+        const data = document.getElementById('cadData').value;
+        const senha = document.getElementById('cadSenha').value;
+        const confSenha = document.getElementById('cadConfSenha').value;
+
+        if (!nome || !email || !data || !senha || !confSenha) {
+            alert("Por favor, preencha todos os campos do Passo 1.");
+            return;
+        }
+        if (senha !== confSenha) {
+            alert("As senhas não coincidem.");
+            return;
+        }
+
         passo1.style.display = 'none';
         passo2.style.display = 'block';
     });
@@ -189,7 +202,6 @@ window.onload = function irEvir() {
         esconderTelas();
         telaHome.style.display = 'block';
     });
-
     
     btnCad.addEventListener('click', function(e) {
         e.preventDefault();
@@ -204,41 +216,207 @@ window.onload = function irEvir() {
         esconderTelas();
         telaLogin.style.display = 'block';
     });
-   
 };
-
 
 function listarRacas() {
     fetch('http://localhost:8080/racas')
         .then(response => {
-            if (!response.ok) {
-                throw new Error("Serviço indisponível no momento");
-            } else {
-                return response.json();
-            }
+            if (!response.ok) throw new Error("Serviço indisponível no momento");
+            return response.json();
         })
         .then(racas => {
             const selectRaca = document.getElementById('cad-raca');
-            
             for (var i = 0; i < racas.length; i++) {
                 const raca = racas[i];
-
                 selectRaca.innerHTML += `<option value="${raca.id}">${raca.nome}</option>`;
             }
         })
-        .catch(erro => {
-            console.error("Erro ao carregar raças:", erro);
-        });
+        .catch(erro => console.error("Erro ao carregar raças:", erro));
 }
 
 listarRacas();
 
-
-function cadastrarUsuario(){
-    const iptNome = document.getElementById('nav-home');
-    const btnLogin = document.getElementById('nav-login');
-    const btnCad = document.getElementById('nav-cad');
+function listarPersonalidades() {
+    fetch('http://localhost:8080/personalidades')
+        .then(response => {
+            if (!response.ok) throw new Error("Serviço indisponível no momento");
+            return response.json();
+        })
+        .then(personas => {
+            const radioBtnPersona = document.getElementById('opPersona');
+            for (var i = 0; i < personas.length; i++) {
+                const persona = personas[i];
+                radioBtnPersona.innerHTML += `<label><input type="radio" name="personalidade" value="${persona.id}"> ${persona.nome}</label>`;
+            }
+        })
+        .catch(erro => console.error("Erro ao carregar personalidades:", erro));
 }
+
+function listarCores() {
+    fetch('http://localhost:8080/cores')
+        .then(response => {
+            if (!response.ok) throw new Error("Serviço indisponível no momento");
+            return response.json();
+        })
+        .then(cores => {
+            const checkCor = document.getElementById('opCor');
+            for (var i = 0; i < cores.length; i++) {
+                const cor = cores[i];
+                checkCor.innerHTML += `<label><input type="checkbox" name="cor" value="${cor.id}"> ${cor.nome}</label>`;
+            }
+        })
+        .catch(erro => console.error("Erro ao carregar personalidades:", erro));
+}
+
+listarCores()
+listarPersonalidades();
+
+function validarCadastro() {
+    const iptNome = document.getElementById('cadNome');
+    const iptEmail = document.getElementById('cadEmail');
+    const iptData = document.getElementById('cadData');
+    const iptSenha = document.getElementById('cadSenha');
+    const iptConfSenha = document.getElementById('cadConfSenha');
+    const iptQtdGato = document.getElementById('cadQtd');
+
+    if (!iptNome || !iptEmail || !iptData || !iptSenha || !iptConfSenha || !iptQtdGato) {
+        alert("Erro interno: Elementos do formulário não encontrados.");
+        return false;
+    }
+
+    const nome = iptNome.value.trim();
+    const email = iptEmail.value.trim();
+    const data = iptData.value;
+    const senha = iptSenha.value;
+    const confSenha = iptConfSenha.value;
+    const qtdGato = iptQtdGato.value;
+
+    if (!nome || !email || !data || !senha || !confSenha || !qtdGato) {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+    }
+
+    if (!email.includes('@') || !email.includes('.')) {
+        alert("Por favor, insira um e-mail válido.");
+        return false;
+    }
+
+    const dataNascimento = new Date(data);
+    const dataAtual = new Date();
+
+    if (dataNascimento >= dataAtual) {
+        alert("A data de nascimento não pode ser hoje ou no futuro.");
+        return false;
+    }
+
+    if (isNaN(qtdGato) || Number(qtdGato) < 0) {
+        alert("A quantidade de gatos deve ser um número válido (zero ou maior).");
+        return false;
+    }
+
+    if (senha.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return false;
+    }
+
+    if (senha !== confSenha) {
+        alert("As senhas não coincidem.");
+        return false;
+    }
+
+    return true;
+}
+
+function cadastrarUsuario() {
+    if (validarCadastro() !== true) {
+        return;
+    }
+
+    const selectRaca = document.getElementById('cad-raca');
+    if (selectRaca.value === "") {
+        alert("Por favor, selecione uma raça.");
+        return;
+    }
+
+    const raca = selectRaca.value; 
+    const iptNome = document.getElementById('cadNome');
+    const iptEmail = document.getElementById('cadEmail');
+    const iptData = document.getElementById('cadData');
+    const iptSenha = document.getElementById('cadSenha');
+    const iptQtdGato = document.getElementById('cadQtd');
+
+    const corSelecionada = document.querySelectorAll('input[name=cor]:checked');
+    const cores = [];
+    corSelecionada.forEach((cor) => {
+        cores.push(cor.value); 
+    });
+        
+    const usuario = {
+        "nome": iptNome.value,
+        "email": iptEmail.value,
+        "dataNascimento": iptData.value,
+        "qtdGatosTem": Number(iptQtdGato.value),
+        "senha": iptSenha.value,
+        "fkRacaFavorita": raca,
+        "coresFavoritas": cores 
+    };
+
+    fetch('http://localhost:8080/usuarios', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(usuario)
+    })
+    .then(response => {
+        if (response.status === 201) {
+            console.log("Usuario salvo com sucesso!");
+            return response.json(); 
+        } else {
+            console.log("Erro no fetch cadastro!");
+            throw new Error("Falha ao cadastrar o usuário. Status: " + response.status);        
+        }
+    })
+    .then(dadosRetornados => {
+        console.log("Sucesso:", dadosRetornados);
+        esconderTelas();
+        telaLogin.style.display = 'block';
+    })
+    .catch(erro => {
+        console.error("Erro:", erro.message);
+        alert(erro.message);
+    });
+}
+
+function logar(){
+    const senha = document.getElementById('senha').value.trim();
+    const email = document.getElementById('email').value.trim();
+     
+    fetch('http://localhost:8080/usuarios')
+        .then(response => {
+            if (!response.ok) throw new Error("Serviço indisponível no momento");
+            return response.json();
+        })
+        .then(usuarios => {
+            for (var i = 0; i < usuarios.length; i++) {
+                const user = usuarios[i];
+                if(user.email == email && user.senha == senha){
+                    sessionStorage.setItem("idUser", user.id);
+                    console.log(user.id)
+                    sessionStorage.setItem("nomeUser", user.nome);
+                    console.log(user.nome)
+
+                    window.location.href = "home.html"
+                    return;
+                }
+            }
+            alert("Email ou senha incorretos!")
+        })
+        .catch(erro => console.error("Erro ao carregar usuarios:", erro));
+}
+
+
+
 function esconderTelas() {
     telaHome.style.display = 'none';
     telaLogin.style.display = 'none';

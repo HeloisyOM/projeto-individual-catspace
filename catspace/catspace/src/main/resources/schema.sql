@@ -96,10 +96,6 @@ INSERT INTO corGato (nome) VALUES
    ('Preto');
 
 
-INSERT INTO usuario(nome,email,dataNascimento,qtdGatosTem,senha) VALUES
-         ('TESTE1','EMAIL','2000-12-20',20,'1325t6erfdv');
-
-
 INSERT INTO personalidade(nome) VALUES
         ('Preguiçoso'),
         ('Bravo'),
